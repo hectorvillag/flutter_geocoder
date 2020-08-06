@@ -32,7 +32,7 @@ class NotAvailableException extends Exception {
  */
 public class GeocoderPlugin implements MethodCallHandler {
 
-  private Geocoder geocoder;
+  private Context context;
 
   public GeocoderPlugin(Context context) {
 
