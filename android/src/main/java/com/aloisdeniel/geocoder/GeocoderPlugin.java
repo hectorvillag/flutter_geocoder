@@ -35,8 +35,7 @@ public class GeocoderPlugin implements MethodCallHandler {
   private Context context;
 
   public GeocoderPlugin(Context context) {
-
-    private Context context;
+    this.context = context;
   }
 
   /**
