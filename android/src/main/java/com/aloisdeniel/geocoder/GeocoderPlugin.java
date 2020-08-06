@@ -146,6 +146,7 @@ public class GeocoderPlugin implements MethodCallHandler {
   }
 
   private void findAddressesFromCoordinates(final float latitude, final float longitude, final String language, final Result result) {
+    final GeocoderPlugin plugin = this;
     final Geocoder geocoder = language == null ? new Geocoder(context) : new Geocoder(context, new Locale(language));
 
     new AsyncTask<Void, Void, List<Address>>() {
