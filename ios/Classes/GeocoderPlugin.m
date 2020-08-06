@@ -29,6 +29,7 @@
       NSNumber *latitude = call.arguments[@"latitude"];
       NSString *language = call.arguments[@"language"];
       CLLocation * location = [[CLLocation alloc] initWithLatitude:latitude.doubleValue longitude:longitude.doubleValue];
+      [self initializeGeocoder];
       if (language != (id)[NSNull null] && @available(iOS 11.0, *)) {
           NSLocale *locale = [[NSLocale alloc] initWithLocaleIdentifier:language];
           [self.geocoder reverseGeocodeLocation:location preferredLocale:locale completionHandler:^(NSArray *placemarks, NSError *error) {
